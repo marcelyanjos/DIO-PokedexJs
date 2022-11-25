@@ -1,16 +1,30 @@
 html {
   background-image: url("/Assets/bgIcon.png");
+  min-height: 380px;
+  max-height: 2100px;
+  height: 100%;
 }
+body {
+  min-height: 380px;
+  max-height: 2100px;
+  height: 100%;
+}
+
 @media screen and (min-width: 992px) {
   html {
     /* background-color: #e06666; */
     background-size: 60%;
     background-position: 80% 15%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  body {
+    overflow: hidden;
   }
   .scroll {
-    max-height: 540px;
+    max-height: 900px;
     min-height: 360px;
+    height: 85%;
     min-width: 360px;
     max-width: 400px;
     overflow: hidden;
@@ -36,6 +50,7 @@ html {
     height: 100%;
     max-height: 240px;
   }
+
   .pokemon .detail {
     display: flex;
     flex-direction: row;
@@ -57,6 +72,69 @@ html {
   .type {
     font-size: 20px;
   }
+  .pokedex {
+    flex-direction: row;
+    display: flex;
+    padding: 0 10px;
+    width: 100%;
+    min-width: 992px;
+    min-height: 380px;
+    height: 100%;
+    /* overflow: hidden; */
+  }
+  .pokeId {
+    min-width: 800px;
+    width: 100%;
+    height: 100%;
+  }
+  #pokemonId {
+    max-height: 900px;
+    min-height: 360px;
+    height: 85%;
+    width: 78%;
+  }
+  .pokeBody {
+    margin-left: 10px;
+    margin-right: 5%;
+    margin-bottom: 200px;
+    min-width: 800px;
+    width: 100%;
+    max-height: 900px;
+    min-height: 360px;
+    height: 100%;
+    display: flex;
+  }
+  .imageCard {
+    height: 60%;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .itemImage {
+    height: 70%;
+    width: 70%;
+  }
+  .shiny{
+    height: 30%;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: -2px 4px 20px 2px rgb(163 156 156 / 53%);
+    margin-right: -15%;
+    margin-top: -15%;
+  }
+  .imageShiny{
+    height: 100%;
+    width: 100%;
+  }
+  .infos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 992px) {
   html {
@@ -70,6 +148,7 @@ html {
     height: 100%;
     max-height: 818px;
   }
+
   .pokemon .detail {
     display: flex;
     flex-direction: column;
@@ -118,11 +197,6 @@ html {
     font-weight: 400;
   }
 }
-.pokedex {
-  padding: 0 10px;
-  min-height: 380px;
-  height: 100%;
-}
 
 .title {
   color: #e06666;
@@ -142,11 +216,11 @@ html {
 }
 
 .normal {
-  background-color: #ccc9aa;
+  background-color: #aca98c;
 }
 
 .grass {
-  background-color: #3e9709;
+  background-color: #75c348;
 }
 
 .fire {
@@ -231,7 +305,8 @@ html {
 
 .pokemon .name {
   text-transform: capitalize;
-  color: #fff;
+  font-family: "Monserrat", sans-serif;
+  font-weight: bold;
   margin-bottom: 0.25rem;
 }
 
