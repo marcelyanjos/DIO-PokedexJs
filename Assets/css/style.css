@@ -9,6 +9,22 @@ body {
   max-height: 2100px;
   height: 100%;
 }
+h1 {
+  margin: 0;
+}
+#closeBtn{
+  box-shadow: 0px 0px 18px -10px #000000;
+	background-color:#fff;
+	border-radius:25px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:17px;
+	padding:5px 15px;
+	text-decoration:none;
+}
 
 @media screen and (min-width: 992px) {
   html {
@@ -49,6 +65,7 @@ body {
     min-height: 180px;
     height: 100%;
     max-height: 240px;
+    width: 85%;
   }
 
   .pokemon .detail {
@@ -75,7 +92,6 @@ body {
   .pokedex {
     flex-direction: row;
     display: flex;
-    padding: 0 10px;
     width: 100%;
     min-width: 992px;
     min-height: 380px;
@@ -86,6 +102,7 @@ body {
     min-width: 800px;
     width: 100%;
     height: 100%;
+    margin-bottom: 50px;
   }
   #pokemonId {
     max-height: 900px;
@@ -94,8 +111,6 @@ body {
     width: 78%;
   }
   .pokeBody {
-    margin-left: 10px;
-    margin-right: 5%;
     margin-bottom: 200px;
     min-width: 800px;
     width: 100%;
@@ -105,7 +120,7 @@ body {
     display: flex;
   }
   .imageCard {
-    height: 60%;
+    height: 85%;
     background-color: rgb(255, 255, 255);
     width: 100%;
     border-radius: 50%;
@@ -117,16 +132,20 @@ body {
     height: 70%;
     width: 70%;
   }
-  .shiny{
+  .shiny {
     height: 30%;
     width: 50%;
+    min-width: 100px;
+    min-height: 100px;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
-    box-shadow: -2px 4px 20px 2px rgb(163 156 156 / 53%);
+    box-shadow: 0px 0px 60px -21px rgba(0, 0, 0, 0.41);
     margin-right: -15%;
     margin-top: -15%;
+    width: 15%;
+    height: 25%;
   }
-  .imageShiny{
+  .imageShiny {
     height: 100%;
     width: 100%;
   }
@@ -134,6 +153,69 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+  .root{
+    width:60%; height:80%
+  }
+  .content {
+    margin-top: 5%;
+    height: 60%;
+    width: 30%;
+    justify-content: center;
+  }
+  .header {
+    height: 40px;
+    display: flex;
+    padding: 0 15px 0 15px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 60px -21px rgba(0, 0, 0, 0.41);
+  }
+  .nameInfo {
+    margin-top: 10px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .headerInfo {
+    background: #fff;
+    width: 76%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-between;
+  }
+  .numberInfo {
+    background-color: #fff;
+    width: 22%;
+    height: 40px;
+    text-indent: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .icons {
+    width: 100%;
+    height: 100%;
+  }
+  .resume{
+    background-color: #fff;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+  }
+  .titles{
+    width: 20%;
+    border-right: 1px solid #000;
+    padding-left: 15px;
+  }
+  .attributes{
+    padding-left: 15px;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -171,6 +253,114 @@ body {
   .type {
     font-size: 20px;
   }
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #f4f4f4;
+    opacity: 0.98;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pokeBody {
+    width: 80%;
+    height: 100%;
+    padding: 15px;
+  }
+  .header{
+    width: 79%;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 5px;
+  }
+  .content {
+    margin-top: -5%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageCard {
+    margin-right: 20%;
+    margin-top: 30px;
+    height: 60%;
+    width: 32%;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  .itemImage {
+    height: 50%;
+  }
+  .shiny {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-right: -40%;
+    margin-top: -120px;
+  }
+  .nameInfo {
+    margin-top: -5%;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .headerInfo {
+    background: #fff;
+    width: 76%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-between;
+  }
+  .numberInfo {
+    background-color: #fff;
+    width: 22%;
+    height: 40px;
+    text-indent: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .icons {
+    width: 100%;
+    height: 100%;
+  }
+  .resume{
+    background-color: #fff;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+  }
+  .titles{
+    width: 20%;
+    border-right: 1px solid #000;
+    padding-left: 15px;
+  }
+  .titles p{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Monserrat", sans-serif;
+  }
+  .attributes{
+    padding-left: 15px;
+  }
+  .attributes p{
+    font-size: 15px;
+  }
 }
 @media screen and (min-width: 380px) and (max-width: 576px) {
   html {
@@ -184,6 +374,15 @@ body {
     height: 100%;
     max-height: 818px;
   }
+  .types{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .type{
+    width: 150px;
+  }
   .image {
     min-height: 360px;
     max-height: 576px;
@@ -196,6 +395,113 @@ body {
     font-size: 20px;
     font-weight: 400;
   }
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #f4f4f4;
+    opacity: 0.98;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pokeBody {
+    width: 80%;
+    height: 100%;
+    padding: 15px;
+  }
+  .header{
+    width: 79%;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 5px;
+  }
+  .content {
+    margin-top: -30px;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageCard {
+    margin-right: 30%;
+    height: 60%;
+    width: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  .itemImage {
+    width: 40%;
+    height: 50%;
+  }
+  .shiny {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-right: -40%;
+    margin-top: -35%;
+  }
+  .nameInfo {
+    margin-top: -30px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .headerInfo {
+    background: #fff;
+    width: 76%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-between;
+  }
+  .numberInfo {
+    background-color: #fff;
+    width: 22%;
+    height: 40px;
+    text-indent: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .icons {
+    width: 100%;
+    height: 100%;
+  }
+  .resume{
+    background-color: #fff;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+  }
+  .titles{
+    width: 20%;
+    border-right: 1px solid #000;
+    padding-left: 15px;
+  }
+  .titles p{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Monserrat", sans-serif;
+  }
+  .attributes{
+    padding-left: 15px;
+  }
+  .attributes p{
+    font-size: 15px;
+  }
 }
 
 .title {
@@ -204,6 +510,7 @@ body {
   font-size: 48px;
   margin-left: 5px;
   margin-bottom: 1px;
+  margin-top: 0;
 }
 /* pokemons */
 .pokemons {
@@ -224,7 +531,7 @@ body {
 }
 
 .fire {
-  background-color: #ee7f30;
+  background-color: #ff9441;
 }
 
 .water {
